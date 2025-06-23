@@ -293,8 +293,8 @@ docker ps -a
 # Xem tất cả images
 docker images
 
-# Cleanup unused resources
-docker system prune -a
+# Cleanup unused resources (container/image)
+docker system prune -a --volumes -f
 
 # Xem disk usage
 docker system df
