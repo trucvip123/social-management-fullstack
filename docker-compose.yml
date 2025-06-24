@@ -66,6 +66,8 @@ services:
     build:
       context: ./SocialManagementFE
       dockerfile: Dockerfile
+      args:
+        - REACT_APP_API_URL=http://74.249.129.209/api
     container_name: social-management-frontend
     restart: unless-stopped
     depends_on:
@@ -73,8 +75,6 @@ services:
         condition: service_healthy
     networks:
       - social-network
-    environment:
-      - REACT_APP_API_URL=http://74.249.129.209/api
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:80/health"]
       interval: 30s
