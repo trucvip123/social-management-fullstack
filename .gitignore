@@ -35,6 +35,7 @@ coverage/
 # Dependency directories
 node_modules/
 jspm_packages/
+chrome-linux64/
 
 # Optional npm cache directory
 .npm
